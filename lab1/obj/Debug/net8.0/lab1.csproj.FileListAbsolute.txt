@@ -1,0 +1,15 @@
+/Users/a1234/Documents/Development/C#/lab1/bin/Debug/net8.0/lab1
+/Users/a1234/Documents/Development/C#/lab1/bin/Debug/net8.0/lab1.deps.json
+/Users/a1234/Documents/Development/C#/lab1/bin/Debug/net8.0/lab1.runtimeconfig.json
+/Users/a1234/Documents/Development/C#/lab1/bin/Debug/net8.0/lab1.dll
+/Users/a1234/Documents/Development/C#/lab1/bin/Debug/net8.0/lab1.pdb
+/Users/a1234/Documents/Development/C#/lab1/obj/Debug/net8.0/lab1.GeneratedMSBuildEditorConfig.editorconfig
+/Users/a1234/Documents/Development/C#/lab1/obj/Debug/net8.0/lab1.AssemblyInfoInputs.cache
+/Users/a1234/Documents/Development/C#/lab1/obj/Debug/net8.0/lab1.AssemblyInfo.cs
+/Users/a1234/Documents/Development/C#/lab1/obj/Debug/net8.0/lab1.csproj.CoreCompileInputs.cache
+/Users/a1234/Documents/Development/C#/lab1/obj/Debug/net8.0/lab1.dll
+/Users/a1234/Documents/Development/C#/lab1/obj/Debug/net8.0/refint/lab1.dll
+/Users/a1234/Documents/Development/C#/lab1/obj/Debug/net8.0/lab1.pdb
+/Users/a1234/Documents/Development/C#/lab1/obj/Debug/net8.0/lab1.genruntimeconfig.cache
+/Users/a1234/Documents/Development/C#/lab1/obj/Debug/net8.0/ref/lab1.dll
+/Users/a1234/Documents/Development/C#/lab1/obj/Debug/net8.0/lab1.sourcelink.json

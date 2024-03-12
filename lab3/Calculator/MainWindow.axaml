@@ -1,0 +1,172 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:calc="clr-namespace:Calculator"
+        mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="500"
+        x:Class="Calculator.MainWindow"
+        x:DataType="calc:Calculator"
+        Title="Calculator"
+        MinWidth="50"
+        MinHeight="100"
+        Width="310"
+        Height="500">
+
+        <Design.DataContext> 
+            <calc:Calculator/>
+        </Design.DataContext>
+
+        <Grid ShowGridLines="False" RowDefinitions="0.32*, *">
+            <Border Grid.Row="0" Background="Black"/>
+            <Border Grid.Row="1" Background="Black"/>
+
+            <TextBlock Grid.Row="0" Text="{Binding ValueToShow}" Foreground="White" FontSize="40" HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="Segoe UI"></TextBlock> 
+
+            <Grid Grid.Row="1" ShowGridLines="False" RowDefinitions="*,*,*,*,*,*,*" ColumnDefinitions="*,*,*,*">
+
+				<Button Grid.Row="0" Grid.Column="0" CornerRadius="10" Name="buttonDecimalLog" Command="{Binding Execute}" VerticalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="White" Foreground="Black" Content="lg">
+                    <Button.CommandParameter>
+                        <calc:Operation>TakeDecLog</calc:Operation>
+                    </Button.CommandParameter>
+				</Button>
+
+                <Button Grid.Row="0" Grid.Column="1" CornerRadius="10" Name="buttonNaturalLog" Command="{Binding Execute}" VerticalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="White" Foreground="Black" Content="ln">
+                    <Button.CommandParameter>
+                        <calc:Operation>TakeNatLog</calc:Operation>
+                    </Button.CommandParameter>
+				</Button>
+
+                <Button Grid.Row="0" Grid.Column="2" CornerRadius="10" Name="buttonErase" Command="{Binding EraseAllSymbols}" CommandParameter="erase" VerticalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="White" Foreground="Black" Content="C">
+				</Button>
+
+                <Button Grid.Row="0" Grid.Column="3" CornerRadius="10" Name="buttonBackspace" Command="{Binding EraseOneSymbol}" CommandParameter="backspace" VerticalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="White" Foreground="Black" Content="←">
+				</Button>
+
+                <Button Grid.Row="1" Grid.Column="0" CornerRadius="10" Name="buttonSinus" Command="{Binding Execute}" VerticalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="White" Foreground="Black" Content="sin">
+                    <Button.CommandParameter>
+                        <calc:Operation>TakeSine</calc:Operation>
+                    </Button.CommandParameter>
+				</Button>
+
+                <Button Grid.Row="1" Grid.Column="1" CornerRadius="10" Name="buttonCosinus" Command="{Binding Execute}" VerticalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="White" Foreground="Black" Content="cos">
+                    <Button.CommandParameter>
+                        <calc:Operation>TakeCosine</calc:Operation>
+                    </Button.CommandParameter>
+				</Button>
+
+                <Button Grid.Row="1" Grid.Column="2" CornerRadius="10" Name="buttonTangent" Command="{Binding Execute}" VerticalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="White" Foreground="Black" Content="tan">
+                    <Button.CommandParameter>
+                        <calc:Operation>TakeTangent</calc:Operation>
+                    </Button.CommandParameter>
+				</Button>
+
+                <Grid Grid.Row="1" Grid.Column="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+    	            </Grid.RowDefinitions>
+
+                    <Button Grid.Row="0" CornerRadius="10" Name="buttonCeil" Command="{Binding Execute}" VerticalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="White" Foreground="Black" Content="ceil">
+                        <Button.CommandParameter>
+                            <calc:Operation>RoundUp</calc:Operation>
+                        </Button.CommandParameter>
+				    </Button>
+
+                    <Button Grid.Row="1" CornerRadius="10" Name="buttonFloor" Command="{Binding Execute}" VerticalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="White" Foreground="Black" Content="floor">
+                        <Button.CommandParameter>
+                            <calc:Operation>RoundDown</calc:Operation>
+                        </Button.CommandParameter>
+				    </Button>
+
+                </Grid>
+
+                <Button Grid.Row="2" Grid.Column="0" CornerRadius="10" Name="buttonRaiseToPower" Command="{Binding Take}" VerticalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="White" Foreground="Black" Content="x^y">
+                    <Button.CommandParameter>
+                        <calc:Operation>RaiseToPower</calc:Operation>
+                    </Button.CommandParameter>
+				</Button>
+
+                <Button Grid.Row="2" Grid.Column="1" CornerRadius="10" Name="buttonFactorial" Command="{Binding Execute}" VerticalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="White" Foreground="Black" Content="n!">
+                    <Button.CommandParameter>
+                        <calc:Operation>TakeFactorial</calc:Operation>
+                    </Button.CommandParameter>
+				</Button>
+
+                <Button Grid.Row="2" Grid.Column="2" CornerRadius="10" Name="buttonMod" Command="{Binding Take}" VerticalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="White" Foreground="Black" Content="mod">
+                    <Button.CommandParameter>
+                        <calc:Operation>Modulo</calc:Operation>
+                    </Button.CommandParameter>
+				</Button>
+
+                <Button Grid.Row="2" Grid.Column="3" CornerRadius="10" Name="buttonDivision" Command="{Binding Take}" VerticalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="White" Foreground="Black" FontSize="26" Content="÷">
+                    <Button.CommandParameter>
+                        <calc:Operation>Divide</calc:Operation>
+                    </Button.CommandParameter>
+				</Button>
+
+                <Button Grid.Row="3" Grid.Column="0" CornerRadius="10" Name="buttonSeven" Command="{Binding InsertSymbol}" CommandParameter="7" VerticalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="White" Content="7" Foreground="Black">
+				</Button>
+
+                <Button Grid.Row="3" Grid.Column="1" CornerRadius="10" Name="buttonEight" Command="{Binding InsertSymbol}" CommandParameter="8" VerticalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="White" Content="8" Foreground="Black">
+				</Button>
+
+                <Button Grid.Row="3" Grid.Column="2" CornerRadius="10" Name="buttonNine" Command="{Binding InsertSymbol}" CommandParameter="9" VerticalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="White" Content="9" Foreground="Black">
+				</Button>
+
+                <Button Grid.Row="3" Grid.Column="3" CornerRadius="10" Name="buttonMultiplication" Command="{Binding Take}" VerticalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="White" Foreground="Black" Content="×" FontSize="26">
+                    <Button.CommandParameter>
+                        <calc:Operation>Multiply</calc:Operation>
+                    </Button.CommandParameter>
+				</Button>
+
+                <Button Grid.Row="4" Grid.Column="0" CornerRadius="10" Name="buttonFour" Command="{Binding InsertSymbol}" CommandParameter="4" VerticalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="White" Content="4" Foreground="Black">
+				</Button>
+
+                <Button Grid.Row="4" Grid.Column="1" CornerRadius="10" Name="buttonFive" Command="{Binding InsertSymbol}" CommandParameter="5" VerticalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="White" Content="5" Foreground="Black">
+				</Button>
+
+                <Button Grid.Row="4" Grid.Column="2" CornerRadius="10" Name="buttonSix" Command="{Binding InsertSymbol}" CommandParameter="6" VerticalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="White" Content="6" Foreground="Black">
+				</Button>
+
+                <Button Grid.Row="4" Grid.Column="3" CornerRadius="10" Name="buttonMinus" Command="{Binding Take}" VerticalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="White" Foreground="Black" Content="-" FontSize="26">
+                    <Button.CommandParameter>
+                        <calc:Operation>Subtruct</calc:Operation>
+                    </Button.CommandParameter>
+				</Button>
+
+                <Button Grid.Row="5" Grid.Column="0" CornerRadius="10" Name="buttonOne" Command="{Binding InsertSymbol}" CommandParameter="1" VerticalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="White" Content="1" Foreground="Black">
+				</Button>
+
+                <Button Grid.Row="5" Grid.Column="1" CornerRadius="10" Name="buttonTwo" Command="{Binding InsertSymbol}" CommandParameter="2" VerticalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="White" Content="2" Foreground="Black">
+				</Button>
+
+                <Button Grid.Row="5" Grid.Column="2" CornerRadius="10" Name="buttonThree" Command="{Binding InsertSymbol}" CommandParameter="3" VerticalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="White" Content="3" Foreground="Black">
+				</Button>
+
+                <Button Grid.Row="5" Grid.Column="3" CornerRadius="10" Name="buttonPlus" Command="{Binding Take}" VerticalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="White" Foreground="Black" Content="+" FontSize="26">
+                    <Button.CommandParameter>
+                        <calc:Operation>Add</calc:Operation>
+                    </Button.CommandParameter>
+				</Button>
+
+                <Button Grid.Row="6" Grid.Column="0" CornerRadius="10" Name="buttonOposite" Command="{Binding Execute}" VerticalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="White" Foreground="Black" Content="+ / -">
+                    <Button.CommandParameter>
+                        <calc:Operation>TakeOpposite</calc:Operation>
+                    </Button.CommandParameter>
+				</Button>
+
+                <Button Grid.Row="6" Grid.Column="1" CornerRadius="10" Name="buttonZero" Command="{Binding InsertSymbol}" CommandParameter="0" VerticalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="White" Content="0" Foreground="Black">
+				</Button>
+
+                <Button Grid.Row="6" Grid.Column="2" CornerRadius="10" Name="buttonSeparator" Command="{Binding InsertSymbol}" CommandParameter="," VerticalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="White" Content="," Foreground="Black">
+				</Button>
+
+                <Button Grid.Row="6" Grid.Column="3" CornerRadius="10" Name="buttonResult" Command="{Binding Take}" VerticalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="Gray" Foreground="White" Content="=" FontSize="26">
+                    <Button.CommandParameter>
+                        <calc:Operation>Result</calc:Operation>
+                    </Button.CommandParameter>
+				</Button>
+
+            </Grid>
+        </Grid>
+</Window>
