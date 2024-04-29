@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "VqTpavwyAUocnNbd/RtEAgQDdqm3xW9goUOh63plVI3q/1UoNFKwtZgKtvsY6Ijlga8OWsWmx5vD5vZqqKNqdA==",
+  "success": true,
+  "projectFilePath": "C:\\SIBSUITS\\visual-programming\\lab7\\lab7.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\a1234\\.nuget\\packages\\system.reactive\\6.0.0\\system.reactive.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

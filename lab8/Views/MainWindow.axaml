@@ -1,0 +1,38 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:lab8.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="lab8.Views.MainWindow"
+		xmlns:vws="using:lab8.Views"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Background="Transparent"
+       
+        Title="lab8">
+
+    <Design.DataContext>
+ 
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+	
+	<Window.DataTemplates>
+		<DataTemplate DataType="vm:DataGridViewModela">
+			<vws:DataGrid/>
+		</DataTemplate>
+	</Window.DataTemplates>
+
+	<Window.DataTemplates>
+		<DataTemplate DataType="vm:TreeViewViewModel">
+			<vws:TreeView/>
+		</DataTemplate>
+	</Window.DataTemplates>
+
+	<Grid ColumnDefinitions="100,1.5*,4*" RowDefinitions="Auto,Auto,Auto"  Margin="4">
+        <RadioButton Grid.Row="0" Grid.Column="0" GroupName="RB" Content="DataGrid" Command="{Binding ChangeViewCommand}" CommandParameter="{Binding Path=viewModelBases[0]}"/>
+		<RadioButton Grid.Row="0" GroupName="RB" Grid.Column="1" Content="TreeView" Command="{Binding ChangeViewCommand}" CommandParameter="{Binding Path=viewModelBases[1]}"/>
+		<ContentControl  Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="2" Content="{Binding Content}" />
+	</Grid>
+
+</Window>

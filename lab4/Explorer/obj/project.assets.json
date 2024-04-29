@@ -4488,19 +4488,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\vital\\.nuget\\packages\\": {}
+    "C:\\Users\\a1234\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vital\\Desktop\\4\\Explorer\\Explorer.csproj",
+      "projectUniqueName": "C:\\SIBSUITS\\visual-programming\\lab4\\Explorer\\Explorer.csproj",
       "projectName": "Explorer",
-      "projectPath": "C:\\Users\\vital\\Desktop\\4\\Explorer\\Explorer.csproj",
-      "packagesPath": "C:\\Users\\vital\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vital\\Desktop\\4\\Explorer\\obj\\",
+      "projectPath": "C:\\SIBSUITS\\visual-programming\\lab4\\Explorer\\Explorer.csproj",
+      "packagesPath": "C:\\Users\\a1234\\.nuget\\packages\\",
+      "outputPath": "C:\\SIBSUITS\\visual-programming\\lab4\\Explorer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\vital\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\a1234\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -4518,6 +4518,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -4561,7 +4566,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
